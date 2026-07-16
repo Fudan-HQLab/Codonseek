@@ -17,7 +17,7 @@ that maximize the potential of translation efficiency (TE).
 
 ```
 ┌───────────┐      ┌───────────────┐      ┌──────────────┐
-│  CaLM     │────▶│  TEN (Reward)  │────▶│  MCTS + PVN  │
+│  CaLM     │────▶│  TEN (Reward) │────▶│  MCTS + PVN  │
 │  Embedding│      │  Score Model  │      │  Self-Play   │
 └───────────┘      └───────────────┘      └──────────────┘
 ```
