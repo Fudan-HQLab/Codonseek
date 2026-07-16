@@ -1,0 +1,13 @@
+2026-07-01 10:48:17,359 [INFO   ] collect_2 | Collect #2 initialising.
+2026-07-01 10:48:17,370 [WARNING] collect_2 | No policy checkpoint at current_policy.pkl; initialising from scratch.
+2026-07-01 10:48:17,975 [INFO   ] collect_2 | Collect #2 started  (c_puct=10.00)
+2026-07-01 10:48:17,975 [INFO   ] collect_2 | Collect #2 -- round 1  c_puct=10.00
+2026-07-01 10:50:29,705 [INFO   ] collect_2 | Collect #2, game 1 -- 131.73 s
+2026-07-01 10:50:29,707 [INFO   ] collect_2 | Collect #2 -- round 2  c_puct=10.00
+2026-07-01 10:52:42,918 [INFO   ] collect_2 | Collect #2, game 1 -- 133.21 s
+2026-07-01 10:52:42,920 [INFO   ] collect_2 | Collect #2 -- round 3  c_puct=10.00
+2026-07-01 10:54:55,437 [INFO   ] collect_2 | Collect #2, game 1 -- 132.52 s
+2026-07-01 10:54:55,439 [INFO   ] collect_2 | Collect #2 -- round 4  c_puct=10.00
+2026-07-01 10:57:08,819 [INFO   ] collect_2 | Collect #2, game 1 -- 133.38 s
+2026-07-01 10:57:08,822 [INFO   ] collect_2 | Collect #2 -- round 5  c_puct=10.00
+2026-07-01 10:57:27,355 [INFO   ] collect_2 | Collect #2 interrupted.
