@@ -7,7 +7,7 @@ Genetic-code lookup tables have been moved to ``codon_mapper.py``.
 
 CONFIG = {
     # --- Protein target ---
-    "Protein_sequence": "MSSQIRQNYSTDVEAAVNSLVNLYLQASYTYLSLGFYFDRDDVALEGVSHFFRELAEEKREGYERLLKMQNQRGGRALFQDIKKPAEDEWGKTPDAMKAAMALEKKLNQALLDLHALGSARTDPHLCDFLETHFLDEEVKLIKKMGDHLTNLHRLGGPEAGLGEYLFERLTLKHD*",
+    "Protein_sequence": "",
 
     # --- MCTS ---
     "dirichlet": 0.2,       # Dirichlet noise weight for exploration
@@ -16,13 +16,13 @@ CONFIG = {
 
     # --- Self-play ---
     "buffer_size": 1_000_000,
-    "collect_data_buffer": 2000,  # minimum games before a training update
+    "collect_data_buffer": 1000,  # minimum games before a training update
     "num_runs": 3,                # number of parallel collect processes
     "train_update_interval": 5, # seconds between training updates
 
     # --- Training ---
-    "learning_rate": 1e-7,
-    "batch_size": 128,
+    "learning_rate": 1e-6,
+    "batch_size": 512,
     "kl_targ": 0.02,
     "epochs": 5,
     "game_batch_num": 500,
@@ -31,7 +31,7 @@ CONFIG = {
     # --- Model paths ---
     "pytorch_model_path": "current_policy.pkl",
     "train_data_buffer_path": "biggest_train_data_buffer.pkl",
-    "ten_model_path": "ten-weights",
+    "ten_model_path": "TEN_weights.pth",
     "pretrain_file": "pretrain_start/pretrain.pkl",  # warm-start data
 
     # --- GPU ---
