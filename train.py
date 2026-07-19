@@ -1,4 +1,4 @@
-"""Training loop for the Policy-Value Network.
+﻿"""Training loop for the Policy-Value Network.
 
 Loads self-play data from per-collect pickle buffers, merges them,
 and runs policy-gradient updates with KL-constrained early stopping.
@@ -118,13 +118,13 @@ class TrainPipeline:
                 self.policy_value_net = PolicyValueNet(model_file=init_model)
                 print(f"Loaded model from {init_model}")
             except Exception as e:
-                print(f"Model load failed: {e} — initialising new network")
+                print(f"Model load failed: {e} -- initialising new network")
                 self._init_new_network()
         else:
             self._init_new_network()
 
     def _init_new_network(self):
-        print("Initialising new PolicyValueNet …")
+        print("Initialising new PolicyValueNet ...")
         self.policy_value_net = PolicyValueNet()
 
     # ------------------------------------------------------------------
@@ -186,7 +186,7 @@ class TrainPipeline:
     # ------------------------------------------------------------------
 
     def run(self):
-        """Main training loop — sleeps between updates, interrupted by Ctrl-C."""
+        """Main training loop -- sleeps between updates, interrupted by Ctrl-C."""
         train_losses = []
         ploss = []
         vloss = []
@@ -207,7 +207,7 @@ class TrainPipeline:
                     )
                     if self.data_buffer:
                         break
-                    print("No data yet — retrying in 5 s …")
+                    print("No data yet -- retrying in 5 s ...")
                     time.sleep(5)
 
                 n_games = len(self.data_buffer) / (len(self.seq) / 3)
