@@ -5,7 +5,8 @@
   <img src="https://img.shields.io/badge/RL-MCTS%20%2B%20AlphaZero-6DB33F" alt="RL">
 </p>
 
-# codonseek -- Codon Optimisation via Reinforcement Learning
+# Codonseek: Reinforcement Learning-Based Codon Optimization Guided by Experimentally Grounded Reward Signals
+Junyuan Zeng, Hanyao Jiang, Gaoxing Guo, Jingqi Wang, Xinzhou Qian, Enze Zhang, Chunlong Wen, Jungang Zhou, Hong Lu, Qiang Huang, and Yao Yu
 
 codonseek is a codon optimisation framework powered by AlphaZero-style
 reinforcement learning. Given a target protein -- human ferritin light chain
