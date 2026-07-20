@@ -24,7 +24,7 @@ synonymous codon sequences for variantsthat maximise translation efficiency
 1. **Embedding**  -- Using a pretrained Transformer CaLM (Codon adaptation Language Model) that
    encodes codon sequences into 768-dimensional embeddings.
    [Outeiral & Deane, *Nat. Mach. Intell.* 2024]
-2. **TEN** (Translation Efficiency Network) -- a reward model that maps CaLM
+2. **TEN** (Translation Efficiency Network) -- a reward model that maps
    embeddings to a 5-class translation efficiency score.
 3. **MCTS + PVN** -- Monte Carlo tree search paired with a policy-value
    dual-head CNN, iteratively discovering high-scoring sequences through
@@ -115,7 +115,7 @@ All key parameters live in [rl/config.py](rl/config.py):
 |--------------------|-------------------|-----------------------------------------------|
 | `Protein_sequence` | aa seq            | Target protein amino-acid sequence            |
 | `play_out`         | 220               | MCTS simulations per move                     |
-| `c_puct`           | 10                | UCT exploration constant                      |
+| `c_puct`           | 10                | PUCT exploration constant                      |
 | `learning_rate`    | 1e-7              | Policy network learning rate                  |
 | `kl_targ`          | 0.02              | KL-divergence early-stopping threshold        |
 | `num_runs`         | 3                 | Number of parallel data-collection processes  |
