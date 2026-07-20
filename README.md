@@ -5,10 +5,10 @@
   <img src="https://img.shields.io/badge/RL-MCTS%20%2B%20AlphaZero-6DB33F" alt="RL">
 </p>
 
-# codonseek -- Codon Optimisation via Reinforcement Learning
+# Codonseek -- Codon Optimisation via Reinforcement Learning
 
-codonseek is a codon optimisation framework powered by AlphaZero-style
-reinforcement learning. Given a target protein it searches the space of
+Codonseek is a codon optimisation framework powered by AlphaZero-style
+reinforcement learning. Given a target protein, it searches the space of
 synonymous codon sequences for variantsthat maximise translation efficiency
 (TE).
 
@@ -16,24 +16,24 @@ synonymous codon sequences for variantsthat maximise translation efficiency
 
 ```
 +----------+     +--------------+     +-------------+
-| CaLM     |---->| TEN (Reward) |---->| MCTS + PVN  |
+| sequences|---->| TEN (Reward) |---->| MCTS + PVN  |
 | Embedding|     | Score Model  |     | Self-Play   |
 +----------+     +--------------+     +-------------+
 ```
 
-1. **CaLM** (Codon adaptation Language Model) -- a pretrained Transformer that
+1. **Embedding**  -- Using a pretrained Transformer CaLM (Codon adaptation Language Model) that
    encodes codon sequences into 768-dimensional embeddings.
    [Outeiral & Deane, *Nat. Mach. Intell.* 2024]
 2. **TEN** (Translation Efficiency Network) -- a reward model that maps CaLM
    embeddings to a 5-class translation efficiency score.
-3. **MCTS + PVN** -- Monte Carlo Tree Search paired with a policy-value
+3. **MCTS + PVN** -- Monte Carlo tree search paired with a policy-value
    dual-head CNN, iteratively discovering high-scoring sequences through
    self-play.
 
 ## Project Structure
 
 ```
-codonseek/
+Codonseek/
 +-- calm/                       # CaLM pretrained model (inference-only)
 |   +-- model.py                #   Transformer architecture
 |   +-- modules.py              #   Layers & activation functions
@@ -49,7 +49,7 @@ codonseek/
 |   +-- config.py               #   Hyperparameters & paths
 |   +-- mapper.py               #   Codon encoding matrix & legal-move generator
 |   +-- pvn.py                  #   Policy-Value dual-head CNN (AlphaZero-style)
-|   +-- mcts.py                 #   Monte Carlo Tree Search & player
+|   +-- mcts.py                 #   Monte Carlo tree search & player
 |   +-- game.py                 #   Self-play engine (SelfSampling)
 |   +-- collect.py              #   Multi-process data-collection pipeline
 |   +-- _utils.py               #   Timer decorator & shared helpers
@@ -78,7 +78,7 @@ codonseek/
 #### 1. Generate Pretraining Data (optional -- `pretrain.pkl` already provided)
 
 ```bash
-cd codonseek
+cd Codonseek
 python pretrain_start/generate_traindata.py       # produce scored FASTA
 python pretrain_start/generate_pretrainpkl.py \
     hFTLcompany20%.fasta pretrain_start/pretrain.pkl
