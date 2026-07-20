@@ -12,7 +12,7 @@ CONFIG = {
     # --- MCTS ---
     "dirichlet": 0.2,       # Dirichlet noise weight for exploration
     "play_out": 220,        # Number of MCTS simulations per move
-    "c_puct": 10,           # Exploration constant for UCT
+    "c_puct": 10,           # Exploration constant for PUCT
 
     # --- Self-play ---
     "buffer_size": 1_000_000,
