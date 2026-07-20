@@ -5,13 +5,12 @@
   <img src="https://img.shields.io/badge/RL-MCTS%20%2B%20AlphaZero-6DB33F" alt="RL">
 </p>
 
-# Codonseek: Reinforcement Learning-Based Codon Optimization Guided by Experimentally Grounded Reward Signals
-Junyuan Zeng, Hanyao Jiang, Gaoxing Guo, Jingqi Wang, Xinzhou Qian, Enze Zhang, Chunlong Wen, Jungang Zhou, Hong Lu, Qiang Huang, and Yao Yu
+# codonseek -- Codon Optimisation via Reinforcement Learning
 
 codonseek is a codon optimisation framework powered by AlphaZero-style
-reinforcement learning. Given a target protein -- human ferritin light chain
-(FTL) -- it searches the space of synonymous codon sequences for variants
-that maximise translation efficiency (TE).
+reinforcement learning. Given a target protein it searches the space of
+synonymous codon sequences for variantsthat maximise translation efficiency
+(TE).
 
 ## How It Works
 
@@ -135,3 +134,14 @@ All key parameters live in [rl/config.py](rl/config.py):
 
 The CaLM submodule is adapted from [oxpig/CaLM](https://github.com/oxpig/CaLM)
 under the MIT License. All other code in this repository is original.
+
+## Cite This Work
+
+```bibtex
+@article{Unpublished,
+  title={Codonseek: Reinforcement Learning-Based Codon Optimization Guided by Experimentally Grounded Reward Signals},
+  author={Junyuan Zeng, Hanyao Jiang, Gaoxing Guo, Jingqi Wang, Xinzhou Qian, Enze Zhang, Chunlong Wen, Jungang Zhou, Hong Lu, Qiang Huang, and Yao Yu},
+  journal={Unpublished},
+  year={2026},
+  publisher={Unpublished}
+}
