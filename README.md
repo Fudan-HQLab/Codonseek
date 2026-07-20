@@ -73,33 +73,6 @@ codonseek/
 
 ## Getting Started
 
-### Environment & Hardware
-
-All model training and evaluation were conducted on the following platform:
-
-| Component  | Specification                                    |
-|------------|--------------------------------------------------|
-| **OS**     | Rocky Linux 9.5 (Blue Onyx)                      |
-| **CPU**    | AMD EPYC 9654 96-Core Processor                  |
-| **GPU**    | 2x NVIDIA GeForce RTX 4060 Ti (16 GB VRAM each)  |
-| **CUDA**   | 12.1                                             |
-| **Driver** | NVIDIA 565.57.01                                 |
-| **Memory** | ~128 GB                                          |
-
-Software stack:
-
-| Dependency | Version |
-|------------|---------|
-| Python     | 3.13.2  |
-| PyTorch    | 2.3.1   |
-| CUDA       | 12.1    |
-
-Additional Python packages required:
-
-```bash
-pip install torch numpy matplotlib biopython scikit-learn pandas requests
-```
-
 ### Running the Pipeline
 
 #### 1. Generate Pretraining Data (optional -- `pretrain.pkl` already provided)
