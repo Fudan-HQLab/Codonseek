@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/RL-MCTS%20%2B%20AlphaZero-6DB33F" alt="RL">
 </p>
 
-# Codonseek -- Codon Optimisation via Reinforcement Learning
+# Codonseek -- Codon Optimization via Reinforcement Learning
 
 Codonseek is a codon optimisation framework powered by AlphaZero-style
 reinforcement learning. Given a target protein, it searches the space of
