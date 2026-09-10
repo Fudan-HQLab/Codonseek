@@ -214,9 +214,18 @@ class CaLM:
         tokens = tokens.to(self.device)
 
         # Single forward pass for the entire batch
+        padding_mask = tokens.eq(self.alphabet.padding_idx)
         repr_ = self.model(tokens, repr_layers=[12])["representations"][12]
 
         if average:
+            if padding_mask.any():
+                # Mean-pool only over real codon positions; padding tokens are
+                # zeroed in the encoder but still occupy columns of the padded
+                # tensor.  Averaging over them dilutes short sequences.
+                length = (~padding_mask).sum(dim=1, keepdim=True).clamp(min=1)
+                return (
+                    repr_ * (~padding_mask).unsqueeze(-1).type_as(repr_)
+                ).sum(dim=1) / length
             return repr_.mean(dim=1)  # (batch, embed_dim)
         return repr_  # (batch, seq_len, embed_dim)
 
