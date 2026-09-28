@@ -1,6 +1,6 @@
 ﻿<p align="center">
   <img src="https://img.shields.io/badge/PyTorch-2.3.1-EE4C2C?logo=pytorch" alt="PyTorch">
-  <img src="https://img.shields.io/badge/Python-3.13.2-3776AB?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Python-3.11.11-3776AB?logo=python" alt="Python">
   <img src="https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia" alt="CUDA">
   <img src="https://img.shields.io/badge/RL-MCTS%20%2B%20AlphaZero-6DB33F" alt="RL">
 </p>
